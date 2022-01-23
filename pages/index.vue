@@ -59,12 +59,19 @@ export default {
       liffId: '1655383415-Zb72O2jA'
     }).then(() => {
       if(liff.isLoggedIn()){
-        liff.getProfile().then(profile => {                    
+        liff.getProfile()
+        .then(profile => {                    
           this.$store.dispatch('setLine', profile);
+          this.lineProfile.LineEmail = this.$liff.getDecodedIDToken().email;
+          console.log(this.lineProfile.LineEmail)
           this.isDone();
         })
       }else{
-        liff.login();
+        liff.login({
+          scope:
+            "profile,profile%20openid,profile%20openid%20email,openid,openid%20email",
+          prompt: "consent",
+        });
       }
     })
   },  
@@ -79,7 +86,10 @@ export default {
         firstname: this.$store.getters.getRegister.firstname,
         lastname: this.$store.getters.getRegister.lastname,
         gender: this.$store.getters.getRegister.gender       
-      },      
+      },
+      lineProfile: {
+        LineEmail: ''
+      }
     }
   },  
   methods: {    
