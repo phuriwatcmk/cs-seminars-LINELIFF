@@ -38,6 +38,14 @@
 
 <script>
 export default {
+  computed: {
+    getLine(){
+      return this.$store.getters.getLine;
+      },
+    getUser(){
+      return this.$store.getters.getUser;
+    }
+  },
   data(){
     return{
       form: {
@@ -48,7 +56,7 @@ export default {
   methods: {
     next(){
       this.$store.dispatch("setSurvey", this.form)
-      this.$axios.patch(`https://nuxt-tutor.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
+      this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/step3')
       }).catch(e => console.log(e))
     },

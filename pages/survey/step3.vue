@@ -57,10 +57,18 @@ export default {
       }
     }
   },
+    computed: {
+    getLine(){
+      return this.$store.getters.getLine;
+    },
+    getUser(){
+      return this.$store.getters.getUser;
+    },
+  },
   methods: {
     submit(){
       this.$store.dispatch("setSurvey", this.form)
-      this.$axios.patch(`https://nuxt-tutor.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
+      this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/done')
       }).catch(e => console.log(e))
     },

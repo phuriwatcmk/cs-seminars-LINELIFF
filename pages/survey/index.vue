@@ -37,6 +37,32 @@
 
 <script>
 export default {
+  mounted(){
+    liff.init({
+      liffId: '1655383415-Zb72O2jA'
+    }).then(() => {
+      if(liff.isLoggedIn()){
+        liff.getProfile().then(profile => {
+          this.$store.dispatch('setLine', profile);
+          this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+            if(res.data != null){
+              this.$store.dispatch('setUser', res.data);
+            }
+          });
+        })
+      }else{
+        liff.login();
+      }
+    })
+  },
+    computed: {
+    getLine(){
+      return this.$store.getters.getLine;
+    },
+    getUser(){
+      return this.$store.getters.getUser;
+    },
+  },
   data(){
     return {
       form: {
@@ -47,7 +73,7 @@ export default {
   methods: {
     next() {
       this.$store.dispatch("setSurvey", this.form)     
-      this.$axios.patch(`https://nuxt-tutor.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
+      this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/step2')
       }).catch(e => console.log(e))   
     }
