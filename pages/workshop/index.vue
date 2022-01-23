@@ -100,7 +100,7 @@ export default {
     next() {
       if(this.index == this.workshops.length -1){
         // api save register workshop 
-        this.$axios.patch(`https://nuxt-tutor.firebaseio.com/workshops/line:0001.json`, { ...this.selectedWorkshop }).then((res) => {
+        this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/workshops/line:0001.json`, { ...this.selectedWorkshop }).then((res) => {
           this.$router.push('/workshop/done')
         }).catch(e => console.log(e)) 
       }else{
