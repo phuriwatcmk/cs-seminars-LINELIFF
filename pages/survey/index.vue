@@ -6,7 +6,7 @@
       flat
       dark
     >
-      <v-toolbar-title>Survey</v-toolbar-title>
+      <v-toolbar-title>Survey of Seminars</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
