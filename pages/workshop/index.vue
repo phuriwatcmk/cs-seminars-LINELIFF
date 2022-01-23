@@ -85,7 +85,7 @@ export default {
       },
       selectedWorkshop: [],
       list: [],
-      workshops: this.$store.getters.getWorkshop    
+      workshops: this.$store.getters.getWorkshop
     }
   },
   mounted(){
