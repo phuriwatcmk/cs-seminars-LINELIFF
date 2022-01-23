@@ -63,7 +63,6 @@ export default {
         .then(profile => {                    
           this.$store.dispatch('setLine', profile);
           this.lineProfile.LineEmail = liff.getDecodedIDToken().email;
-          console.log(this.lineProfile.LineEmail)
           this.isDone();
         })
       }else{
@@ -85,7 +84,8 @@ export default {
       form: {
         firstname: this.$store.getters.getRegister.firstname,
         lastname: this.$store.getters.getRegister.lastname,
-        gender: this.$store.getters.getRegister.gender       
+        gender: this.$store.getters.getRegister.gender,
+        email: this.lineProfile.LineEmail
       },
       lineProfile: {
         LineEmail: ''
