@@ -7,7 +7,8 @@ export const state = () => ({
   line: {
     pictureUrl: null,
     displayName: null,
-    userId: null
+    userId: null,
+    email: null,
   },
   survey: {
     survey1: 5,
@@ -259,7 +260,7 @@ export const mutations = {
       ...state.line,
       ...data
     }
-  }
+  },
 }
 
 export const actions = {
