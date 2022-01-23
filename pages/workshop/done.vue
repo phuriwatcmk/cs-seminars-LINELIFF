@@ -20,7 +20,7 @@
               </p>
             </div>
             <!-- <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="workshop">Register Workshop</v-btn> -->
-            <div class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</div>                    
+            <v-btn class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</v-btn>                    
           </div>
         </v-col>
       </v-row>

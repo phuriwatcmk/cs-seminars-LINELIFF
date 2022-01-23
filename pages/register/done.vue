@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     workshop(){
-      this.$router.push('/workshop')
+      this.$router.push('/reward')
     },
     close(){
       liff.closeWindow();

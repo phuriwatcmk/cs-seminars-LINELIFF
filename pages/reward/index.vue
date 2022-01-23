@@ -54,7 +54,7 @@
 export default {
   mounted(){
     liff.init({
-      liffId: '1654259572-eY7zEd2M'
+      liffId: '1655383415-Zb72O2jA'
     }).then(() => {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
@@ -125,27 +125,7 @@ export default {
         {
           name: 'stamp3',
           value: false
-        },
-        {
-          name: 'stamp4',
-          value: false
-        },
-        {
-          name: 'stamp5',
-          value: false
-        },
-        {
-          name: 'stamp6',
-          value: false
-        },
-        {
-          name: 'stamp7',
-          value: false
-        },
-        {
-          name: 'stamp8',
-          value: false
-        }     
+        }, 
       ]
     }
   }
