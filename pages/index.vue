@@ -62,7 +62,7 @@ export default {
         liff.getProfile()
         .then(profile => {                    
           this.$store.dispatch('setLine', profile);
-          this.lineProfile.LineEmail = this.$liff.getDecodedIDToken().email;
+          this.lineProfile.LineEmail = liff.getDecodedIDToken().email;
           console.log(this.lineProfile.LineEmail)
           this.isDone();
         })
