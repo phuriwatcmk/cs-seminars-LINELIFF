@@ -1,6 +1,6 @@
-        <template>
+<template>
   <v-card
-    class="mx-auto"
+    class="mx-auto justify-center"
     max-width="344"
     outlined
   >
@@ -24,24 +24,27 @@
     </v-list-item>
 
     <v-card-actions>
-
+            <v-btn class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</v-btn>                    
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
 export default {
-  mounted(){
-    gen()
+  async mounted(){
+    await this.gen()
   },
   data(){
     return {
-      val : ''
+      val : null
     }
   },
   methods: {
     gen(){
       this.val = Math.floor(1000 + Math.random() * 9000);
+    },
+    close(){
+      liff.closeWindow();
     }
   }
 }

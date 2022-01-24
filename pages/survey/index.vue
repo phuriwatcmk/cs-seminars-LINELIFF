@@ -72,7 +72,8 @@ export default {
   },
   methods: {
     next() {
-      this.$store.dispatch("setSurvey", this.form)     
+      this.$store.dispatch("setSurvey", this.form)
+      console.log(this.$store.getters.getLine.userId)
       this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/step2')
       }).catch(e => console.log(e))   
