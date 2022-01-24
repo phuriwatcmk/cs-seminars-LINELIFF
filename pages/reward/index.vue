@@ -102,7 +102,7 @@ export default {
           }
           return obj;
         })
-        this.$axios.patch(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
+        this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
 
         }).catch(e => alert(e))
       }).catch(e => alert(e))
