@@ -59,12 +59,12 @@ export default {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
           this.$store.dispatch('setLine', profile);
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+          this.$axios.get(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
             }
           });
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+          this.$axios.get(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
               this.stamps = res.data
             }
