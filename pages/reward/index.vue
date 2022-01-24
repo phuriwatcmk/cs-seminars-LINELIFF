@@ -108,7 +108,7 @@ export default {
       }).catch(e => alert(e))
     },
     next(){
-      this.$router.push('/done');
+      this.$router.push('done');
     }
   },
   data(){
