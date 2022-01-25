@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="primary"
+      color="#655D8A"
       dense
       flat
       dark
@@ -21,12 +21,14 @@
             <v-text-field
               v-model="form.email"
               type="email"
+              color="#655D8A"
               dense      
               :rules="emailRules"
               label="Email"
             ></v-text-field>            
             <v-text-field
               v-model="form.phone"
+              color="#655D8A"
               dense          
               :rules="phoneRules"
               @keypress="onlyNumber($event, 10)"
@@ -36,22 +38,24 @@
               ref="dialog"
               v-model="modal"
               persistent
+              color="#655D8A"
               width="290px"
             >
               <template v-slot:activator="{ on }">
                 <v-text-field
                   v-model="form.birthday"
                   label="Birthday"
+                  color="#655D8A"
                   prepend-icon="event"
                   readonly
                   v-on="on"
                   class="set-birthday"
                 ></v-text-field>
               </template>
-              <v-date-picker :max="new Date().toISOString().substr(0, 10)" v-model="form.birthday" scrollable>
+              <v-date-picker color="#655D8A" :max="new Date().toISOString().substr(0, 10)" v-model="form.birthday" scrollable>
                 <v-spacer></v-spacer>
-                <v-btn text color="primary" @click="modal = false">Cancel</v-btn>
-                <v-btn text color="primary" @click="$refs.dialog.save(form.birthday)">OK</v-btn>
+                <v-btn text color="#655D8A" @click="modal = false">Cancel</v-btn>
+                <v-btn text color="#655D8A" @click="$refs.dialog.save(form.birthday)">OK</v-btn>
               </v-date-picker>
             </v-dialog>            
             <p class="text-center text-main mb-0 mt-4">Work Profile</p>
@@ -65,7 +69,7 @@
               dense          
               label="Position"
             ></v-text-field>
-            <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="register">Register</v-btn>
+            <v-btn rounded color="#655D8A" dark class="w-100 mt-10 my-btn" @click="register">Register</v-btn>
             <div class="w-100 text-center my-btn text-primary" @click="back">Back</div>
           </v-form>
         </v-col>

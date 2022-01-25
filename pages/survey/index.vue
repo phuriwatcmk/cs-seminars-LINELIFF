@@ -12,7 +12,7 @@
       <v-row>
         <v-col cols="12">          
           <div class="mt-8 text-primary text-title text-center">
-            Step 1 of 3
+            Step 1 of 2
           </div>
         </v-col>
       </v-row>
@@ -45,9 +45,17 @@ export default {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
           this.$store.dispatch('setLine', profile);
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+          this.$axios.get(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
+            }
+            else{
+              this.$router.push('/')
+            }
+          });
+          this.$axios.get(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+            if(res.data != null){
+              this.$router.push('/survey/done')
             }
           });
         })
@@ -74,7 +82,6 @@ export default {
   methods: {
     next() {
       this.$store.dispatch("setSurvey", this.form)
-      console.log(this.$store.getters.getLine.userId)
       this.$axios.patch(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/step2')
       }).catch(e => console.log(e))   
