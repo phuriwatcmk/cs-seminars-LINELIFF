@@ -63,6 +63,9 @@ export default {
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
             }
+            else{
+              this.$router.push('/')
+            }
           });
           this.$axios.get(`https://cs-seminar-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
