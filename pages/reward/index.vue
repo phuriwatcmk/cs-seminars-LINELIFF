@@ -153,7 +153,7 @@ export default {
   .circle{
     background: #FFF;
     border-radius: 50%;
-    border: 2px #1A56BE solid;
+    border: 2px #655D8A solid;
     height: 55px;
     width: 55px;    
     justify-content: center;
@@ -163,7 +163,7 @@ export default {
       display: none;
     }
     &.active{
-      background: #1A56BE;
+      background: #655D8A;
       span{
         display: none;
       }
@@ -173,7 +173,7 @@ export default {
       }
     }
     &.end{
-      background: #1A56BE;
+      background: #655D8A;
       span{
         font-size: 16px;        
         color: #FFF;
@@ -182,7 +182,7 @@ export default {
     span{
       align-self: center;
       font-size: 20px;
-      color: #1A56BE;
+      color: #655D8A;
       font-weight: bold;
     }
   }

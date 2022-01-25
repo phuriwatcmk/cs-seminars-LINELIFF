@@ -26,7 +26,7 @@
           <v-row>
             <v-col cols="12" v-for="session in item.sessions" :key="session.title">
               <v-card class="agenda-card" :class="session.type == 'set' ? 'card-set': ''"> 
-                <v-card-text v-if="session.type != 'set'">
+                <!-- <v-card-text v-if="session.type != 'set'">
                   <p class="time mb-0">{{ session.time }}</p>
                   <v-row>
                     <v-col cols="4" class="text-center pt-2 pb-0">
@@ -37,8 +37,8 @@
                       <v-card-subtitle class="pl-0 pt-0 pb-0">{{ session.spaker }}</v-card-subtitle>
                     </v-col>
                   </v-row>                  
-                </v-card-text>
-                <div v-else>
+                </v-card-text> -->
+                <div>
                   <v-card-text v-for="sessionSet in session.sessionSet" :key="sessionSet.title">
                     <p class="time mb-0">{{ session.time }}</p>
                     <v-row>
@@ -89,7 +89,7 @@
     font-weight: bold;
     background: #EFEFEF;
     &.v-tab--active{
-      color: #1A56BE !important;      
+      color: #655D8A !important;      
     }    
     &+.v-tab{
       border-left: #BDBDBD solid 1px;
@@ -98,7 +98,7 @@
   .agenda-card{
     color: #4D4D4D;
     .time{
-      color: #1A56BE;
+      color: #655D8A;
       font-weight: bold;
     }
     .agenda-image{
@@ -111,7 +111,7 @@
       margin-top: 15px;
     }
     &.card-set{
-      border-left: 5px solid #1A56BE; 
+      border-left: 5px solid #655D8A; 
       .v-card__text+.v-card__text{
         padding-top: 0 !important;
       }

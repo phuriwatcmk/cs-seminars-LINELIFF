@@ -148,7 +148,7 @@ export default {
       background: rgba($color: #000000, $alpha: 0.3);
       margin-right: 7px;
       &.active{
-        background: #1A56BE;
+        background: #655D8A;
       }
       svg{
         position: absolute;

@@ -53,6 +53,12 @@ export const state = () => ({
             time: "12:00 AM",
             sessionSet: [
               {
+                title: "INTRODUCTIONS-1",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
                 title: "INTRODUCTIONS-2",
                 spaker: "Marvelous Team",
                 image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
@@ -60,6 +66,12 @@ export const state = () => ({
               },
               {
                 title: "INTRODUCTIONS-3",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
+                title: "INTRODUCTIONS-4",
                 spaker: "Marvelous Team",
                 image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
                 duringTime: "100 min"
@@ -84,6 +96,12 @@ export const state = () => ({
             time: "12:00 AM",
             sessionSet: [
               {
+                title: "INTRODUCTIONS-1",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
                 title: "INTRODUCTIONS-2",
                 spaker: "Marvelous Team",
                 image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
@@ -91,6 +109,12 @@ export const state = () => ({
               },
               {
                 title: "INTRODUCTIONS-3",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
+                title: "INTRODUCTIONS-4",
                 spaker: "Marvelous Team",
                 image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
                 duringTime: "100 min"
@@ -115,6 +139,36 @@ export const state = () => ({
             spaker: "Marvelous Team",
             image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
             duringTime: "100 min"
+          },
+          {
+            type: "set",
+            time: "12:00 AM",
+            sessionSet: [
+              {
+                title: "INTRODUCTIONS-1",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
+                title: "INTRODUCTIONS-2",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
+                title: "INTRODUCTIONS-3",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              },
+              {
+                title: "INTRODUCTIONS-4",
+                spaker: "Marvelous Team",
+                image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+                duringTime: "100 min"
+              }
+            ]
           }
         ]
       }
