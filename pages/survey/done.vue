@@ -39,7 +39,7 @@ export default {
   },
   data(){
     return{
-      name: this.$store.getters.getRegister.firstname
+      name: this.$store.getters.getUser.firstname
     }
   },
   methods:{
