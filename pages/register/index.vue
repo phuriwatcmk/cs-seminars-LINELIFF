@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="primary"
+      color="#655D8A"
       dense
       flat
       dark
@@ -45,7 +45,7 @@
               </div>              
               <p>Male</p>
             </div>
-            <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="next">Next</v-btn>
+            <v-btn rounded color="#655D8A" dark class="w-100 mt-10 my-btn" @click="next">Next</v-btn>
           </v-form>
         </v-col>
       </v-row>

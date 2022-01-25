@@ -1,4 +1,16 @@
 <template>
+<div>
+    <v-app-bar
+      color="#655D8A"
+      dense
+      flat
+      dark
+    >
+    <v-toolbar-title>Reward Card</v-toolbar-title>
+    </v-app-bar>
+        <v-container class="pt-0 pb-0">
+      <v-row>
+        <v-col>
   <v-card
     class="mx-auto justify-center"
     max-width="344"
@@ -27,6 +39,10 @@
             <v-btn class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</v-btn>                    
     </v-card-actions>
   </v-card>
+        </v-col>
+      </v-row>
+        </v-container>
+  </div>
 </template>
 
 <script>

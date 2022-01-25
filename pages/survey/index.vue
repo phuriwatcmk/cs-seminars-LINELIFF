@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="primary"
+      color="#655D8A"
       dense
       flat
       dark
@@ -23,12 +23,13 @@
         <v-col cols="10">
            <v-slider
             class="slider"
+            color="#655D8A"
             v-model="form.survey1"
             :max="10"
             :min="0"
             thumb-label="always"
           ></v-slider>
-          <v-btn rounded color="primary" dark class="w-100 my-btn mt-100" @click="next">Next</v-btn>
+          <v-btn rounded color="#655D8A" dark class="w-100 my-btn mt-100" @click="next">Next</v-btn>
         </v-col>        
       </v-row>
     </v-container>

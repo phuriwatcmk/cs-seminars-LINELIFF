@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="primary" dense flat dark>
+    <v-app-bar color="#655D8A" dense flat dark>
       <v-toolbar-title>AGENDA</v-toolbar-title>
     </v-app-bar> 
     <v-sheet elevation="6">

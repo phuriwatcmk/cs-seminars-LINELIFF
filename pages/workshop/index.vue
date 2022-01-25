@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="primary" dense flat dark>
+    <v-app-bar color="#655D8A" dense flat dark>
       <v-toolbar-title>Register Workshop</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
@@ -23,7 +23,7 @@
           <div class="set-padding">
             <v-btn
               rounded
-              color="primary"
+              color="#655D8A"
               dark
               class="w-100 mt-3 my-btn"
               @click="next"

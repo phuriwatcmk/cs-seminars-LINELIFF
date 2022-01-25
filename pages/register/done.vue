@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="primary"
+      color="#655D8A"
       dense
       flat
       dark
@@ -19,7 +19,7 @@
                 Welcome to the event,<br/>Tons of workshop are waiting for you.<br/> We hope you have a good time here.
               </p>
             </div>
-            <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="workshop">Register Workshop</v-btn>
+            <v-btn rounded color="#655D8A" dark class="w-100 mt-10 my-btn" @click="workshop">Register Workshop</v-btn>
             <v-btn class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</v-btn>                    
           </div>
         </v-col>
